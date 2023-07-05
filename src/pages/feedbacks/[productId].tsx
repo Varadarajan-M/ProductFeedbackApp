@@ -103,9 +103,9 @@ const FeedbackHomePage: NextPage<FeedbackHomePageProps> = ({
 				case 'Least Upvotes':
 					return a['upvotesCount'] - b['upvotesCount'];
 				case 'Most Comments':
-					return 1;
+					return b['commentsCount'] - a['commentsCount'];
 				case 'Least Comments':
-					return 1;
+					return a['commentsCount'] - b['commentsCount'];
 
 				case 'Newest First':
 					return b?.createdAt
